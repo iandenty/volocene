@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+   <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <header>
+    {{> header }}
+  </header>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+
+  {{{ contents }}}
+
+
+    {{#each collections.stories}}
+        <a href="{{path}}">{{title}}</a>
+    {{/each}}
+
+
+  <footer>
+    {{> footer }}
+  </footer>
+
+</body>
+</html>
