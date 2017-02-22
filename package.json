@@ -4,7 +4,10 @@
   "description": "A platform for stories about the state of the world",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "build": "npm run site && npm run css && echo hello world",
+    "site": "metalsmith",
+    "css": "postcss --config postcss.json",
+    "watch": "onchange src/**/*.css -- npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,11 +21,6 @@
   ],
   "author": "Ian Denty",
   "license": "ISC",
-  "scripts": {
-    "build": "npm run site && npm run css && echo hello world",
-    "site": "metalsmith",
-    "css": "postcss --config postcss.json"
-  },
   "dependencies": {
     "handlebars": "^4.0.6",
     "metalsmith": "^2.3.0",
@@ -40,6 +38,7 @@
   "devDependencies": {
     "autoprefixer": "^6.7.3",
     "metalsmith-debug": "^1.1.0",
+    "onchange": "^3.2.1",
     "postcss-cli": "^2.6.0",
     "postcss-csso": "^1.1.2"
   }

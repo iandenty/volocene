@@ -7,7 +7,6 @@
         "postcss-nesting",
         "autoprefixer"
     ],
-    "watch": true,
     "autoprefixer": {
         "browsers": "last 2 versions"
     }
