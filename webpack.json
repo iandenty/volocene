@@ -1,0 +1,18 @@
+{
+  "devtool": "source-map",
+  "entry": "./src/assets/js/app.js",
+  "output": {
+    "filename": "bundle.js",
+    "path": "build/assets/js/"
+  },
+  "module": {
+    "rules": [{
+      "loader": "babel-loader",
+      "options": 
+        { "presets": [
+            ["es2015", {"modules": false }] 
+          ] 
+        }
+    }]
+  }
+}
