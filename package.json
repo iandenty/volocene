@@ -10,7 +10,7 @@
     "js": "webpack --config webpack.json",
     "lint:js": "eslint src/assets/js/*.js",
     "watch:css": "onchange src/assets/css/*.css -- npm run build",
-    "watch:js": "onchange src/assets/js/*.js -- npm run lint:js && npm run js && npm run build",
+    "watch:js": "onchange src/assets/js/*.js -- npm run js && npm run build",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js'"
   },
   "repository": {
